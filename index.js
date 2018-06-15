@@ -1,5 +1,5 @@
 var runtime =
-  (typeof window !== 'undefined' && window.regeneratorRuntime) ||
+  (typeof window !== 'undefined' && regeneratorRuntime) ||
   require('regenerator-runtime');
 
 function _asyncToGenerator(fn) {
