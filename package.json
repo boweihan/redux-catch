@@ -1,8 +1,7 @@
 {
   "name": "redux-catch-async",
   "version": "1.0.0",
-  "description":
-    "Error handling middleware for redux that supports async errors",
+  "description": "Error handling middleware for redux that supports sync and async errors",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
@@ -20,13 +19,14 @@
     "redux-catch",
     "redux-middleware"
   ],
-  "author": "Bowei Han",
+  "author": "Bowei Han && Sergio Daniel Xalambrí",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/boweihan/redux-catch-async/issues"
   },
   "homepage": "https://github.com/boweihan/redux-catch-async#readme",
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "regenerator-runtime": "^0.11.1"
   }
 }
