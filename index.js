@@ -1,9 +1,9 @@
-function middlewareFactory(errorHandler) {
-  return function (store) {
-    return function (next) {
-      return function (action) {
+const errorMiddleware = errorHandler => {
+  return store => {
+    return next => {
+      return async action => {
         try {
-          return next(action);
+          return await next(action);
         } catch (err) {
           errorHandler(err, store.getState, action, store.dispatch);
           return err;
@@ -11,6 +11,6 @@ function middlewareFactory(errorHandler) {
       };
     };
   };
-}
+};
 
-module.exports = middlewareFactory;
+module.exports = errorMiddleware;
