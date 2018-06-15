@@ -1,10 +1,13 @@
 {
   "name": "redux-catch-async",
   "version": "1.0.0",
-  "description": "Error handling middleware for redux that supports sync and async errors",
+  "description":
+    "Error handling middleware for redux that supports sync and async errors",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha",
+    "transpile":
+      "./node_modules/babel-cli/bin/babel.js ./src/raw.js --presets env > generated.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,8 @@
   },
   "homepage": "https://github.com/boweihan/redux-catch-async#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "mocha": "^5.2.0",
     "regenerator-runtime": "^0.11.1"
   }
